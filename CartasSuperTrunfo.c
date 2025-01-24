@@ -26,14 +26,14 @@ int main() {
             
             sprintf(paises[p].cidades[c].nomecidade,"%c0%d",letrasPaises[p],c + 1);
 
-            printf("População da cidade %s:\n", paises[p].cidades[c].nomecidade);            
-            scanf("%d", paises[p].cidades[c].populacao );
+            printf("População da cidade %s:\n", &paises[p].cidades[c].nomecidade);            
+            scanf("%d", &paises[p].cidades[c].populacao );
             printf("Área:\n");
-            scanf("%f", paises[p].cidades[c].area);
+            scanf("%f", &paises[p].cidades[c].area);
             printf("PIB:\n");
-            scanf("%f", paises[p].cidades[c].pib );
+            scanf("%f", &paises[p].cidades[c].pib );
             printf("Numero de pontos turísticos:\n");
-            scanf("%d", paises[p].cidades[c].numeroDePontosTuristicos );    
+            scanf("%d", &paises[p].cidades[c].numeroDePontosTuristicos );    
         };
     };
 
@@ -42,9 +42,9 @@ int main() {
         for (int c = 0; c < 4; c++)
         {
             printf(paises[p].cidades[c].nomecidade );
-            printf("%d\n",&paises[p].cidades[c].populacao );
-            printf("%.2fkm²\n", &paises[p].cidades[c].area );
-            printf("%f\n",&paises[p].cidades[c].pib );
+            printf("%d\n",paises[p].cidades[c].populacao );
+            printf("%.2fkm²\n", paises[p].cidades[c].area );
+            printf("%f\n",paises[p].cidades[c].pib );
             printf("%d\n",paises[p].cidades[c].numeroDePontosTuristicos );
         }
     }

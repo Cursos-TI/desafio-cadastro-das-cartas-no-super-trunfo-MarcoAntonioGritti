@@ -27,13 +27,13 @@ int main() {
             sprintf(paises[p].cidades[c].nomecidade,"%c0%d",letrasPaises[p],c + 1);
 
             printf("População da cidade %s:\n", paises[p].cidades[c].nomecidade);            
-            scanf("%d", &paises[p].cidades[c].populacao );
+            scanf("%d", paises[p].cidades[c].populacao );
             printf("Área:\n");
-            scanf("%f", &paises[p].cidades[c].area);
+            scanf("%f", paises[p].cidades[c].area);
             printf("PIB:\n");
-            scanf("%f", &paises[p].cidades[c].pib );
+            scanf("%f", paises[p].cidades[c].pib );
             printf("Numero de pontos turísticos:\n");
-            scanf("%d", &paises[p].cidades[c].numeroDePontosTuristicos );    
+            scanf("%d", paises[p].cidades[c].numeroDePontosTuristicos );    
         };
     };
 
